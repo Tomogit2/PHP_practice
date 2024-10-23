@@ -88,3 +88,10 @@ $flowers = array(
 );
 
 
+
+PHPは「逐次解釈型」のスクリプト言語です。
+helloWorld();  // 定義前に関数を呼び出しても動作します
+
+function helloWorld() {
+    echo "Hello, World!";
+}
