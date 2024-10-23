@@ -48,3 +48,43 @@ echo $result;  // 出力: 良い
 
 
 
+$b = 3;
+$c = $b ** 2;  // $c には 3^2、つまり 9 が代入されます。
+echo $c;       // 出力は 9
+
+
+
+$n = 2;
+$p = 3;
+++$n;  // インクリメント演算子（++）は、変数の値を1増やします。
+$p *= 2;
+$a = "$n, $p";
+--$n;
+$p *= 3;
+$b = "$n, $p";
+print $a . ' / ' . $b;
+
+
+
+rsort()関数
+rsort() は配列の値を降順にソートします。キーは無視され、ソート後に再インデックスされます。
+
+$num = [3, 1, 4, 1, 5, 9];
+rsort($num);
+print_r($num);
+
+arsort()関数
+arsort() は配列の値を降順にソートしますが、キーは保持されます。
+
+krsort()関数
+krsort() は配列のキーを降順にソートします。値はそのまま保持され、キーだけが降順になります。
+
+
+$flowers = array(
+    array('rose', 'hibiscus', 'tulip'),          // $flowers[0]
+    array('snowdrop','lily','gardenia'),         // $flowers[1]
+    array('lavender','gentian','pansy'),         // $flowers[2]
+    array('dandelion','sun flower','marigold')   // $flowers[3]
+);
+
+
