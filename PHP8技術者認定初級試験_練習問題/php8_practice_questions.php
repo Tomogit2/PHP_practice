@@ -95,3 +95,43 @@ helloWorld();  // 定義前に関数を呼び出しても動作します
 function helloWorld() {
     echo "Hello, World!";
 }
+
+
+
+$numbers = array(array('1', '2', '3'), array('4', '5', '6'), array('7', '8', '9'));
+
+function judge($arg) {
+   $arg = $arg ** 2;
+
+   if ($arg < 20) {
+       return array($arg, "low");
+   } elseif ($arg < 45) {
+       return array($arg, "middle");
+   } else {
+       return array($arg, "high");
+   } 
+}
+
+$result = judge($numbers[1][2]);
+
+
+
+function calc($a, $b) {
+   if ($a % $b !== 0){
+      throw new Exception($a . ' is indivisible by ' . $b);
+   }
+
+   return ($a . ' is a multiple of ' . $b);
+}
+
+try {
+   print calc(16, 8). ", ";
+   print calc(13, 4). ", ";
+   print calc(10, 2). ", ";
+} catch (Exception $e) {
+   print $e->getMessage();
+}
+
+
+16 is a multiple of 8, 13 is indivisible by 4 // 実行結果
+
