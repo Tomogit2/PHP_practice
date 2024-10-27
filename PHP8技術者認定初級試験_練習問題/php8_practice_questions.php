@@ -135,3 +135,16 @@ try {
 
 16 is a multiple of 8, 13 is indivisible by 4 // 実行結果
 
+
+setcookie("クッキー名", "クッキーの値", 有効期限, パス, ドメイン, セキュア, httponly);
+
+
+
+$ch = curl_init('https://example.com'); // セッションを初期化し、$ch にハンドルを格納
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // 出力を文字列として返す設定
+$response = curl_exec($ch); // リクエストを実行し、結果を取得
+curl_close($ch); // セッションを終了し、リソースを解放
+print $response;
+
+
+
